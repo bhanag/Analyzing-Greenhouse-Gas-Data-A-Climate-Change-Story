@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyzing U.S. Greenhouse Gas Data: A Climate Change Story">
+    <title>Climate Change Story - Greenhouse Gas Analysis</title>
+
+    <!-- Link to Google Fonts for a modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS -->
+</head>
+
+<body>
+
+    <!-- Loading Screen with Globe Animation -->
+    <div class="globe-container">
+        <div class="earth"></div>
+    </div>
+
+    <header style="display:none;">
+        <h1>Analyzing  Greenhouse Gas Data: A Climate Change Story</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#data-analysis">Data Analysis</a>
+        <a href="map.html">Interactive Map</a> <!-- Link to the map page -->
+        <a href="references.html">References</a>
+    </nav>
+
+    <section id="home" style="display:none;">
+        <h2>Imagine Earth as a cozy blanket wrapped around a warm fire.</h2>
+        <p> The blanket is our atmosphere, and the fire is the sun. The blanket helps keep us warm and comfortable. But what if someone started poking holes in the blanket? The heat would start to escape, and we'd get colder.
+            That's kind of what's happening with climate change. Humans are doing things like burning fossil fuels for energy, which is like poking holes in the blanket. This lets more heat escape, causing Earth to warm up faster than it should. It's like turning up the thermostat too high on our planet!   
+            This warming is causing lots of problems. Ice caps are melting, sea levels are rising, and extreme weather events like hurricanes and droughts are becoming more common. It's like having a really hot summer, but it never cools down.</p>
+        
+        
+        <h2>introduction</h2>
+    <div class="square">
+        <div class="text">
+          
+            <img src="intropicture.jpeg" alt="A beautiful image" width="300" height="200" style="border: 1px solid black; padding: 10px;">
+            <p>
+                A bustling room filled with world leaders, diplomats, and experts. The air is thick with tension and anticipation. The topic of discussion? Climate change.
+                "Folks, let's face it. Our planet's in a bit of a pickle," a seasoned diplomat begins, his voice laced with a hint of urgency. "We're feeling the heat - literally! Rising sea levels, extreme weather events, and melting glaciers are just some of the symptoms. It's like our planet's running a fever, and we're the ones who need to bring it down."
+                A younger, more idealistic leader chimes in, "Think about future generations. We're not just talking about the next decade or two. We're talking about leaving a livable planet for our children, grandchildren, and great-grandchildren. It's a moral imperative."
+                A pragmatic economist adds, "But let's be realistic. Transitioning to a low-carbon economy will require significant investments. We're talking about new technologies, infrastructure, and job training. It's a big challenge, but the rewards are even bigger. A sustainable future means a more prosperous one."
+                As the discussion continues, the weight of the issue becomes increasingly clear. It's not just about science and economics; it's about our very way of life. The choices we make today will shape the world for generations to come.
+            </p>
+            
+        </div>
+        <!-- <div class="image">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheconversation.com%2Fwhat-if-the-world-was-one-country-a-psychologist-on-why-we-need-to-think-beyond-borders-152135&psig=AOvVaw3t3eGCbbqx24dP3VQHPCEX&ust=1728287892652000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDP-6Ck-YgDFQAAAAAdAAAAABAE"  />
+            <img src="C:\Users\nssri\OneDrive\Desktop\main\pteropod_comparison_620.jpg" alt="(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked with ‘kinks’ and weak spots. Photos courtesy Nina Bednarsek, NOAA PMEL. " />
+        </div> -->
+    </div>
+        
+        <h3>NOAA's Role in Climate Monitoring</h3>
+        <p>
+            The National Oceanic and Atmospheric Administration (NOAA) plays a critical role in monitoring greenhouse gases. Their Global Greenhouse Gas Reference Network (GGGRN) tracks concentrations of CO₂, methane (CH₄), nitrous oxide (N₂O), and other trace gases. By collecting data from surface-level sites and high-altitude measurements, NOAA helps build a comprehensive understanding of the distribution and trends of greenhouse gases worldwide. 
+            <a href="https://earth.gov/ghgcenter/data-catalog/noaa-gggrn-co2-concentrations" target="_blank">More about NOAA</a>.
+        </p>
+        <h3>Key Points</h3>
+        <ul>
+            <li>CO₂ is the primary driver of global warming, and its levels have risen significantly due to human activity.</li>
+            <li>NOAA's monitoring efforts are crucial in tracking greenhouse gas concentrations globally.</li>
+            <li>Rising CO₂ levels are responsible for several climate-related issues, including temperature rise, ocean acidification, and severe weather events.</li>
+            <li>Action to reduce emissions and combat climate change is essential for the future sustainability of our planet.</li>
+        </ul>
+    
+        <!-- Images Section -->
+        <!-- <h3>Visualizing CO₂ and Climate Change</h3> -->
+        <!-- <div class="image-gallery"> -->
+            <!-- <img src="intropicture.jpeg" alt="A beautiful image" width="300" height="200">
+            <img src="co2_gr_contour.png" alt="Atmospheric carbon dioxide" />
+            <img src="C:\Users\nssri\OneDrive\Desktop\main\ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png" alt="carbon dioxide over 800,000 years" /> -->
+        <!-- </div> -->
+    </section>
+    
+    <style>
+        
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 40%;
+            max-width: 40%; /* Limit the size of images */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+    </style>
+    
+    
+    
+    <section id="data-analysis">
+        <h2>Data Analysis</h2>
+        <div class="image-gallery">
+            <img src="C02.jpg" alt="A beautiful image" width="300" height="200">
+            
+        </div>
+        
+        <p>The top part shows how the temperature has been rising over time. You can see that the line has been going up steadily since the 1960s. This means that the amount of carbon dioxide in the atmosphere has been increasing.
+            The bottom part shows how fast the temperature is rising. Notice that the line goes up and down, but the overall trend is upward. This means that the rate at which carbon dioxide is increasing is also getting faster.</p>
+    
+        <h3>Data Sources</h3>
+        <ul>
+            <li><a href="https://gml.noaa.gov/education/faq_cat-1.html">NOAA Global Monitoring Laboratory</a>: Provides extensive data on greenhouse gas concentrations.</li>
+            <li><a href="https://datahub.io/core/co2-ppm">CO₂ Data Repository</a>: A public repository for historical and recent CO₂ levels.</li>
+            <li><a href="https://ghgdata.epa.gov/ghgp/main.do">EPA Greenhouse Gas Reporting Program</a>: Offers comprehensive data on greenhouse gas emissions in the U.S.</li>
+        </ul>
+
+        <!-- <h3>NOAA Carbon Dioxide Measurements</h3> -->
+        <div class="image-gallery">
+            <img src="CO2graph.jpg" alt="A beautiful image" width="300" height="200">
+            
+        </div>
+    <p>This graph is a clear sign that global warming is happening. The increasing levels of carbon dioxide are trapping more heat in the atmosphere, causing the planet to warm up. This is a serious problem because it can lead to melting glaciers, rising sea levels, more extreme weather, and changes in the habitats of many animals.
+
+        It's like watching a fever chart for the Earth. And the fever is rising, and it's rising fast.</p>
+       
+    <h3>Visualizing the Data</h3>
+    <p>To facilitate better understanding, we will incorporate graphical representations of the CO₂ and CH₄ data, showcasing trends over time. These visualizations will help illustrate the urgency of addressing greenhouse gas emissions.</p>
+
+    <h4>A Colorful Story of Methane's Rise</h4>
+    <img src="CH4L.jpg" alt="Global average atmospheric carbon dioxide mixing ratios" style="width:65%;align-items: center; ">
+    <p>Imagine a vibrant, swirling ocean. Each ripple and current represents the changing levels of methane gas across the globe over the years.
+        The colors are like a secret code Bright hues mean methane levels are rising rapidly, while cooler tones show areas where the increase is slower or even declining.
+        the steady rise of methane gas in our atmosphere over centuries. It starts in the 1700s, a time when humans began to rely more on fossil fuels. As the years pass, the line climbs higher and higher, reflecting the growing concentration of methane.</p>
+
+    <h4>Methane Measurement</h4>
+    <img src="CH4 graph.jpg" alt="Three-dimensional representation of the latitudinal distribution of atmospheric carbon dioxide" style=" width:65%;align-items: center; ">
+    <p>It is more dramatic, a rollercoaster of ups and downs. It shows the year-to-year changes in the growth rate of methane. Sometimes, the line shoots up, indicating a rapid increase. Other times, it dips, suggesting a slower growth or even a temporary decline.
+
+        But there's a twist! Even when the growth rate slows, the overall trend remains upward. It's like a car climbing a hill; even if it pauses to rest, it's still moving uphill.
+        Methane, a potent greenhouse gas, is accumulating in our atmosphere at an alarming rate. This has serious implications for our climate, including rising temperatures and more extreme weather events.</p>
+
+    <!-- <h4>Temporal and Spatial Variations in CO₂</h4>
+    <img src="C:\Users\nssri\OneDrive\Desktop\main\co2_gr_contour.png" alt="Contour plot showing variations in the atmospheric increases of carbon dioxide" style=" width:65%;align-items: center; ">
+    <p>Contour plot showing the temporal and spatial variations in the atmospheric increases of carbon dioxide. The cooler colors (green, blue) represent periods of lower than average growth rates, while the warmer colors (yellow, orange, red) represent periods of higher growth rates. The plot is derived from measurements of samples collected at the Carbon Cycle cooperative air sampling network sites. The variations in the growth rate of this climatically important gas are due to interannual variations in the imbalance between sources and sinks, and also to variations in atmospheric transport.</p>
+         -->
+        <p>For further details and interactive visualizations, please refer to our <a href="map.html">Interactive Map</a>.</p>
+    </section>
+
+
+    <footer style="display:none;">
+        <p>Climate Change Story Project &copy; 2024</p>
+    </footer>
+    
+    
+    <script>
+        // This simulates loading time; after 3 seconds, the globe disappears, and the main content shows.
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.globe-container').style.display = 'none';
+                document.querySelector('header').style.display = 'block';
+                document.querySelector('nav').style.display = 'flex';
+                document.querySelector('#home').style.display = 'block';
+                document.querySelector('footer').style.display = 'block';
+            }, 3000); // 3 seconds loading time
+        });
+        
+
+    // Loading simulation code
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.querySelector('.globe-container').style.display = 'none';
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('nav').style.display = 'flex';
+            document.querySelector('#home').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+        }, 3000); // 3 seconds loading time
+    });
+    </script>
+
+    <style>
+ 
+
+        .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    width: 100%; /* Adjust width as needed */
+    padding-right: 10px; /* Space between text and image */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.image {
+    width: 100%; /* Adjust width as needed */
+}
+
+.image img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
+        /* General styling for body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f0f8ff;
+            padding: 0;
+            margin: 0;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(to right, #006994, #0099cc); /* Smooth gradient */
+            color: white;
+            text-align: center;
+            padding: 65px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 650;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #006994;
+            border-radius: 5px;
+            transform: scale(1.05); /* Smooth scaling effect */
+        }
+
+        /* Section styling */
+        section {
+            padding: 65px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #006994;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Specific section styling for visual consistency */
+        #home {
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+        }
+
+        #data-analysis, #references {
+            background-color: #fafafa;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Globe animation adjustments */
+        .globe-container {
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 65vh;
+        }
+
+        .earth {
+            width: 65%;
+            height: 65%;
+            background: url('globe.png') no-repeat center center / contain;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            section {
+                width: 90%;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</body>
+
+</html>
